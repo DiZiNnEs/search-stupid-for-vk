@@ -57,4 +57,4 @@ Post on the wall: {posts_on_wall}
         pass
 
 
-parsing('https://vk.com/dizinnes')
+
