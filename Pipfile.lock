@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "315323087b08b253e8eacf1c623724b05d3e926acb14b08b63429483fa517f3b"
+            "sha256": "157f899be4128e0e2007140ffb6790efdda6fab96e5890722d06d98bffe1e36f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -39,6 +39,27 @@
             ],
             "version": "==3.0.4"
         },
+        "colorama": {
+            "hashes": [
+                "sha256:7d73d2a99753107a36ac6b455ee49046802e59d9d076ef8e47b61499fa29afff",
+                "sha256:e96da0d330793e2cb9485e9ddfd918d456036c7149416295932478192f4436a1"
+            ],
+            "version": "==0.4.3"
+        },
+        "configparser": {
+            "hashes": [
+                "sha256:2ca44140ee259b5e3d8aaf47c79c36a7ab0d5e94d70bd4105c03ede7a20ea5a1",
+                "sha256:cffc044844040c7ce04e9acd1838b5f2e5fa3170182f6fda4d2ea8b0099dbadd"
+            ],
+            "version": "==5.0.0"
+        },
+        "crayons": {
+            "hashes": [
+                "sha256:4066ec91fecd6b86755d3f083943815e5958688aecdfae54b24443f190ba6950",
+                "sha256:dcb85b87aa03bb65bd3a073d012796b024cabeb086033e616759e2abb769440b"
+            ],
+            "version": "==0.3.1"
+        },
         "idna": {
             "hashes": [
                 "sha256:7588d1c14ae4c77d74036e8c22ff447b26d0fde8f007354fd48a7814db15b7cb",
@@ -75,6 +96,14 @@
                 "sha256:88206b0eb87e6d677d424843ac5209e3fb9d0190d0ee169599165ec25e9d9115"
             ],
             "version": "==1.25.9"
+        },
+        "webdriver-manager": {
+            "hashes": [
+                "sha256:012166903ffd612dad83687069b1e78cb12a2f876dbc8cc4e7556a42c14e344b",
+                "sha256:8df74fc1fd153feccb4b563e721725c3a2457cb6dd84865d16d9b2d731a5cdfc"
+            ],
+            "index": "pypi",
+            "version": "==3.1.0"
         }
     },
     "develop": {}

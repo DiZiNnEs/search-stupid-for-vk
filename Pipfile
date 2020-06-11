@@ -9,6 +9,7 @@ verify_ssl = true
 beautifulsoup4 = "*"
 requests = "*"
 selenium = "*"
+webdriver-manager = "*"
 
 [requires]
 python_version = "3.8"
