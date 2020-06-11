@@ -1,14 +1,9 @@
-import requests
-import time
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from bs4 import BeautifulSoup as bs
 
-# url = input('Enter a VK user: ')
-url = 'https://vk.com/tamikmanyeah32'
 
-
-def selenium_browser() -> webdriver:
+def selenium_browser(url) -> webdriver:
     browser = webdriver.Chrome(ChromeDriverManager().install())
     browser.get(url)
     try:
@@ -19,8 +14,8 @@ def selenium_browser() -> webdriver:
     return browser
 
 
-def parsing() -> str:
-    html = selenium_browser().page_source
+def parsing(url) -> str:
+    html = selenium_browser(url).page_source
     soup = bs(html, 'html.parser')
     try:
         title = soup.select_one('title').text
@@ -62,5 +57,4 @@ Post on the wall: {posts_on_wall}
         pass
 
 
-if __name__ == '__main__':
-    print(parsing())
+parsing('https://vk.com/dizinnes')
