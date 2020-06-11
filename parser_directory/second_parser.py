@@ -15,7 +15,6 @@ def second_parse(url) -> str:
     html = bs(request_to_page.content, 'html.parser')
     return str(html.find_all())
 
-
 # def stupid_find() -> None:
 #     with open('../calculation/black_list', 'r+') as f:
 #         a = f.read()

@@ -55,6 +55,3 @@ Post on the wall: {posts_on_wall}
         return result
     except:
         pass
-
-
-
