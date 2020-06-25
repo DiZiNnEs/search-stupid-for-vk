@@ -4,6 +4,7 @@ sys.path.insert(1, '/find-stupids-vk/parser_directory/')
 
 from parser_directory import parser
 from parser_directory import second_parser
+from parser_directory import group_parser
 
 black_list = ['FACE', 'СКРИПТОНИТ', 'молодежь', 'stay with me', 'Твои родители случайно н', 'Подкаты Категории А',
               'Мои вечные 16', 'Лирика Души', 'к тебе хочу. очень', 'Душевные цитатки', 'Гифки любовь поцелуи отн',
@@ -19,10 +20,11 @@ black_list = ['FACE', 'СКРИПТОНИТ', 'молодежь', 'stay with me'
               'я редко проявляю интерес к людям. и чем старше становлюсь, тем хуже.', 'Dr', 'V Λ C U U M', 'Эстетика',
               'E U P H O R I A', 'Foréver.', 'Ищу тебя Кокшетау', 'KZ|vines|videos', 'Пикчи для секса',
               'твоей прекрасной юности ', 'E L E G A N T', 'ПРИЗНАВАШКИ КОКШЕТА', 'Bikkembergs', 'молодость',
-              'Френдзона 18+', 'Навсегда...',
-              'Spokoystvie.', 'Это Сеул, детка', 'M.', 'трахать', 'сучка', 'иметь', 'рвать', 'удовлетворять',
-              'вставлять', '', '',
-              '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+              'ВКазГТК г.Кокшетау',
+              'Френдзона 18+', 'Навсегда...', 'Spokoystvie.', 'Это Сеул, детка', 'M.', 'трахать', 'сучка', 'иметь',
+              'рвать', 'удовлетворять',
+              'вставлять', 'S a y k a 🍃', 'БОЛЬ | ЛЮБОВЬ',
+              'Сердце и Душа', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
               '', '', '', '', '', '', '', '', ]
 
 
@@ -31,7 +33,7 @@ def get_information(url):
     return parser.parsing(url)
 
 
-def stupid_detector_1(url):
+def stupid_detector_1(url) -> None:
     print('STUPID DETECTOR 1:')
     for item in black_list:
         for i in item.split(','):
@@ -49,3 +51,15 @@ def stupid_detector_2(url) -> None:
                 print('He is stupid! ' + 'Because we found this words on the page: ' + i)
             else:
                 pass
+
+
+def stupid_group_detector(url) -> None:
+    print('STUPID GROUP DETECTOR: ')
+    for item in black_list:
+        for i in item.split(','):
+            if i in group_parser.group_parsing(url):
+                print('He is stupud!', 'Because we found this words on the groups: ' + i)
+            else:
+                pass
+
+
